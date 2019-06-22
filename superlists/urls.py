@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 # from django.urls import path # error 발생됨
 from django.conf.urls import url
+from lists.views import home_page
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
+    url(r'^$', home_page, name='home'),
+
 ]
