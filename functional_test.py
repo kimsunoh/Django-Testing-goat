@@ -6,7 +6,6 @@ class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
-        self.browser.implicitly_wait(3)
 
     def tearDown(self):
         self.browser.quit()
@@ -17,7 +16,8 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         # 웹 페이지 타이틀과 헤더가 'To-Do'를 표시하고 있다
-        assert 'To-Do' in self.browser.title
+        self.assertIn('To-Do', self.browser.title)
+        self.fail('Finish the test!')
 
         # 그녀는 바로 작업을 추가하기로 한다
 
