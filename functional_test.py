@@ -41,7 +41,8 @@ class NewVisitorTest(unittest.TestCase):
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertTrue(
-            any(row.text == '1: Buy peacock feathers' for row in rows)
+            any(row.text == '1: 공작깃털 사기' for row in rows),
+            '신규 작업이 테이블에 표시되지 않는다'
         )
 
         # 페이지는 다시 갱신되고, 두 개 아이템이 목록에 보인다
