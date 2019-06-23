@@ -55,5 +55,6 @@ class NewVisitorTest(unittest.TestCase):
         # 만족하고 잠자리에 든다
         self.fail('Finish the test!')
 
+
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
